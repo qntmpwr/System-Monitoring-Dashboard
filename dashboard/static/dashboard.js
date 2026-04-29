@@ -78,7 +78,7 @@ function updateCharts(data) {
         yaxis: {
             rangemode: "tozero",
             autorange: false,
-            range: [0, 300]
+            range: [0, 50]
         }
     });
 
