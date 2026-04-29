@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        System Monitor
+        Real-Time CPU, Memory, Disk Usage, and Network Usage
+        Backend: Python and Flask
+        Frontend: JS and Plotly
+    -->
+
+    <title>System Monitor Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <h1>Real-Time System Monitor</h1>
+
+    <div class="charts">
+        <div id="uptime" class="uptime-text"></div>
+        <div id="netChart" class="chart"></div>
+        <div id="cpuChart" class="chart"></div>
+        <div id="memoryChart" class="chart"></div>
+        <div id="diskChart" class="chart"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>
